@@ -1,0 +1,55 @@
+1)      O cardápio de uma lanchonete é dado abaixo. Faça uma função que leia a quantidade de cada item que você consumiu e calcule e retorne a conta final.
+
+>> esse foi feito de uma maneira diferente   > function lanchonete(qtdHamburguer,qtdCheesburguer,qtdFritas,qtdRefrigerante,qtdMilkshake){
+var contafinal = (qtdHamburguer * 3.00 ) + (qtdCheesburguer * 2.50) + (qtdFritas * 2.50) + (qtdRefrigerante * 1.00) + (qtdMilkshake * 3.00)
+
+console.log( "a conta final deu R$" ,contafinal)
+}
+lanchonete(2,5,6,3,0)
+        
+
+>  esse foi feito com switch  >function lanchoneteswhitc(produto, quantidade) {
+    let total
+    switch (produto) {
+        case "hamburguer":
+            total = 3.00 * quantidade
+            break;
+        case "cheesburguer":
+            total = 2.50 * quantidade
+            break;
+        case "fritas":
+            total = 2.50 * quantidade
+            break;
+        case "refrigereante":
+            total = 1.00 * quantidade
+            break;
+        case "milkshake":
+            total = 3.00 * quantidade
+            break;
+        default:
+            total = 0
+            break;
+        
+    }
+    console.log("a conta final foi de ", total)
+}
+lanchoneteswhitc("hamburguer",5)
+
+
+
+2)    Faça uma função que retorne a frase:  Olá, que você tenha um dia muito bom! aaa
+
+
+>>> function bom(){
+    let dia
+    return ( dia + " Olá,que você tenha um dia muito bom ")
+    }
+    console.log(bom())
+
+3)      Faça uma função que receba uma quantidade de chuva dada em polegadas e imprima o equivalente em milímetros (25,4 mm = 1 polegada).
+
+
+>>function chuva(quantidade){
+console.log("quantidade de chuva em milimetros e " +  quantidade * 25.4 )
+}
+chuva(4)

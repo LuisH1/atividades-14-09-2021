@@ -1,0 +1,32 @@
+1)      Faça uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias.
+
+
+>> function pessoa(anos,meses,dias){
+let total = (anos * 365) + (meses * 30) + dias
+console.log("o total de dias é " + total)
+}
+pessoa(30,27,10)
+
+
+2)      Faça uma função que conte de 1 a 100 e a cada múltiplo de 7 escreva no console a mensagem: “Múltiplo de 7”.
+
+>> function numero(){
+    for (var c=1;c<=100;c++){
+     if (c%7==0) {
+         console.log(" multiplo de 7: ", c)
+     }
+    }
+}
+numero()
+
+3)      Faça uma função que repita a palavra  arara 230 vezes.
+
+
+>> function repita(){
+for (var c=1;c<=230;c++){
+    console.log("arara")
+}
+}
+repita()
+
+

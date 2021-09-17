@@ -1,0 +1,49 @@
+1)      O inverno é uma estação maravilhosa, não é? Aquele fiozinho é bom demais. Faça uma função que represente as situações abaixo em que o humor das pessoas é definido de acordo com as tendências climáticas. Com base nas temperaturas dos últimos três dias, as pessoas podem estar tristes ou felizes.
+
+●        Se a temperatura diminuiu do 1º para o 2º dia, mas aumentou ou permaneceu constante do 2º para o 3º , as pessoas ficam felizes (primeira figura).
+
+●        Se a temperatura aumentou do 1º para o 2º dia, mas diminuiu ou permaneceu constante do 2º para o 3º , as pessoas ficaram tristes (segunda figura).
+
+●        Se a temperatura aumentou do 1º para o 2º dia e do 2º para o 3º , mas aumentou do 2º para o 3º menos do que aumentou do 1º para o 2º , as pessoas estão triste (terceira figura).
+
+●        Se a temperatura aumentou do 1º para o 2º dia e do 2º para o 3º , mas aumentou do 2º para o 3º pelo menos o que aumentou do 1º para o 2º , as pessoas estão felizes (quarta figura).
+
+●        Se a temperatura diminuiu do 1º para o 2º dia e do 2º para o 3º , mas diminuiu do 2º para o 3º menos do que diminuiu do 1º para o 2º , as pessoas estão felizes (quinto dígito).
+
+●        Se a temperatura diminuiu do 1º para o 2º dia e do 2º para o 3º , mas diminuiu do 2º para o 3º pelo menos o que havia diminuído do 1º para o 2º , as pessoas estão triste (sexta figura).
+
+●        Se a temperatura permanecer constante do 1º ao 2º dia, as pessoas ficam felizes se a temperatura aumentou do 2º para o 3º ou triste caso contrário (respectivamente, sétimo e oitavo dígitos).
+
+
+
+>>>>> function inverno(temp1dia,temp2dia,temp3dia) {
+    if (temp1dia > temp2dia && temp3dia > temp2dia ){
+        return  "1 as pessoas ficam felizes"
+    }
+ else if (temp1dia < temp2dia && temp2dia <= temp3dia){
+     return " 2 as pessoas ficaram tristes"
+ }
+
+ else if ((temp2dia - temp1dia) > (temp3dia - temp2dia)  ){
+    return " 3 as pessoas fica tristes"
+ }
+ 
+ else if ((temp2dia - temp1dia) <= (temp3dia - temp2dia)) {
+     return " 4 as pessoas estão felizes"
+ }
+ else if ((temp1dia - temp2dia) > (temp2dia - temp3dia)){
+ return " 5 as pessoas estão felizes"
+ }
+ 
+ else if ((temp1dia - temp2dia) <= (temp2dia - temp3dia)) {
+    return" 6 as pessoas estão tristes"
+ }
+ 
+ else if (temp1dia == temp2dia && temp2dia < temp3dia){
+ return " 7 ficaram felizes"
+ }
+  else if  (temp1dia == temp2dia && temp2dia > temp3dia){
+      return " 8 ficaram triste"
+  }
+}
+console.log(inverno(10,10,20))
